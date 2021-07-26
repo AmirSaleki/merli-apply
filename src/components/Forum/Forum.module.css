@@ -1,0 +1,84 @@
+.container {
+  background-color: var(--primaryBlue);
+  padding: 3rem;
+}
+
+.validation {
+  width: 100%;
+  margin: 2rem;
+  text-align: center;
+  color: white;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--darkBlue);
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 1.2rem;
+  width: 100%;
+}
+
+.forum input {
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+
+.validation input {
+  width: 20%;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 2rem;
+}
+
+.hideTitle {
+  display: none;
+}
+.title {
+  transition: ease-out 2s linear;
+  display: block;
+}
+
+.hideForum {
+  display: none;
+}
+
+.forum {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.leftList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .forum {
+    flex-direction: column-reverse;
+  }
+}
