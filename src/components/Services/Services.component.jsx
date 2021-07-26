@@ -5,6 +5,7 @@ import Card from "../UI/Card/Card.component";
 const About = () => {
   return (
     <div className={css.container}>
+      <h1 style={{ color: "white" }}>خدمات ما</h1>
       <Card>
         <div className={css.cardContainer}>
           <div className={css.cardImage}>

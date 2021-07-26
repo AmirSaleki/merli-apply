@@ -44,17 +44,21 @@
 
 .cardText p {
   text-align: right;
-  text-justify: auto;
 }
 
 @media only screen and (max-width: 1000px) {
   .container {
     flex-direction: column;
     padding: 1rem;
+    gap: 1rem;
   }
 
   .cardContainer {
     width: 300px;
-    height: 250px;
+    height: 350px;
+  }
+
+  .cardText {
+    text-align: right;
   }
 }

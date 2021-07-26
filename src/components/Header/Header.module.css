@@ -87,7 +87,7 @@ a:visited {
 }
 
 .carousel {
-  margin: 3rem 6rem;
+  margin: 2rem 2rem;
   flex: 1.2;
 }
 
@@ -106,5 +106,18 @@ a:visited {
 
   .banner {
     flex-direction: column;
+    padding: 1rem 1rem;
+  }
+  .carousel {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    padding: 0;
+    margin: 0;
+  }
+  .intro {
+    margin-top: 1rem;
+    font-size: 1rem;
   }
 }

@@ -46,7 +46,6 @@ button {
   display: none;
 }
 .title {
-  transition: ease-out 2s linear;
   display: block;
 }
 
@@ -79,6 +78,18 @@ button {
 
 @media only screen and (max-width: 1000px) {
   .forum {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    gap: 0;
+  }
+  .validation {
+    margin: 0;
+  }
+  .validation input {
+    width: 100%;
+    margin: 0;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
   }
 }
