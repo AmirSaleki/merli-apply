@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../../logo.svg";
 import Carousel from "../UI/Carousel/Carousel.component";
 import css from "./Header.module.css";
+import { Link } from "react-scroll";
 
 const Header = (props) => {
   const [hamClick, setHamClick] = useState(false);
@@ -17,12 +18,24 @@ const Header = (props) => {
         ></i>
 
         <div className={css.links}>
-          <a href="/" className={css.homeLink}>
+          <Link
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            className={css.homeLink}
+          >
             خانه
-          </a>
-          <a href="/">خدمات</a>
-          <a href="/">فرم ارزیابی</a>
-          <a href="/">تماس با ما</a>
+          </Link>
+          <Link to="services" spy={true} smooth={true}>
+            خدمات
+          </Link>
+          <Link to="forum" spy={true} smooth={true}>
+            فرم ارزیابی
+          </Link>
+          <Link to="contact" spy={true} smooth={true}>
+            تماس با ما
+          </Link>
         </div>
         <div className={css.logo}>
           <img src={logo} alt="Merli-Apply-Logo" />
@@ -30,14 +43,28 @@ const Header = (props) => {
         </div>
         {hamClick && (
           <div className={css.hamMenu}>
-            <a href="/">خانه</a>
-            <a href="/">خدمات</a>
-            <a href="/">فرم ارزیابی</a>
-            <a href="/">تماس با ما</a>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              className={css.homeLink}
+            >
+              خانه
+            </Link>
+            <Link to="services" spy={true} smooth={true}>
+              خدمات
+            </Link>
+            <Link to="forum" spy={true} smooth={true}>
+              فرم ارزیابی
+            </Link>
+            <Link to="contact" spy={true} smooth={true}>
+              تماس با ما
+            </Link>
           </div>
         )}
       </div>
-      <div className={css.banner}>
+      <div className={css.banner} id="home">
         <div className={css.intro}>
           <h1>اخذ پذیرش دانشگاه های آلمان</h1>
           <p>

@@ -6,7 +6,7 @@ import profilePicture from "../../resources/images/Profile.jpg";
 const Footer = () => {
   return (
     <>
-      <div className={css.background}>
+      <div className={css.background} id="contact">
         <div className={css.cardSize}>
           <Card>
             <div className={css.container}>

@@ -4,7 +4,7 @@ import Card from "../UI/Card/Card.component";
 
 const About = () => {
   return (
-    <div className={css.container}>
+    <div className={css.container} id="services">
       <h1 style={{ color: "white" }}>خدمات ما</h1>
       <Card>
         <div className={css.cardContainer}>

@@ -42,7 +42,7 @@ const Forum = () => {
   };
   return (
     <>
-      <div className={css.container}>
+      <div className={css.container} id="forum">
         <div className={css.validation}>
           <div>
             <h1 className={showForum ? css.hideTitle : css.title}>
@@ -63,19 +63,38 @@ const Forum = () => {
         <form onSubmit={submitHandler}>
           <div className={showForum ? css.forum : css.hideForum}>
             <div className={css.leftList}>
-              <input type="text" placeholder="نام و نام خانوادگی" name="name" />
-              <input type="number" placeholder="سن" step="1" name="age" />
+              <input
+                type="text"
+                placeholder="نام و نام خانوادگی"
+                name="name"
+                required
+              />
+
+              <input
+                type="number"
+                placeholder="سن"
+                step="1"
+                name="age"
+                required
+              />
               <input
                 type="text"
                 placeholder="میزان تحصیلات فعلی"
                 name="latest-degree"
+                required
               />
-              <input type="text" placeholder="رشته تحصیلی" name="major" />
+              <input
+                type="text"
+                placeholder="رشته تحصیلی"
+                name="major"
+                required
+              />
               <input
                 type="number"
                 placeholder="معدل آخرین مدرک تحصیلی"
                 step="0.1"
                 name="latest-note"
+                required
               />
             </div>
             <div className={css.rightList}>
@@ -103,7 +122,7 @@ const Forum = () => {
         </form>
         {showConfirmMessage &&
           alert(
-            "درخواست شما با موفقیت ثبت شد و پس از بررسی کارشناسان ما در اولین فرصت با شما تماس خواهد گرفت"
+            "درخواست شما با موفقیت ثبت شد و پس از بررسی کارشناسان ما در اولین فرصت با شما تماس خواهند گرفت"
           )}
         ;
       </div>
