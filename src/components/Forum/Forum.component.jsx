@@ -113,7 +113,7 @@ const Forum = () => {
                 type="email"
                 placeholder="ایمیل"
                 name="email"
-                value={userEmail}
+                defaultValue={userEmail}
               />
               <input type="phone" placeholder="شماره تماس" name="phone" />
               <button type="submit">ارسال</button>
