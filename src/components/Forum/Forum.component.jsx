@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import css from "./Forum.module.css";
 import emailjs from "emailjs-com";
+
+import emailAPI from "../../API_KEY";
+import css from "./Forum.module.css";
 
 const Forum = () => {
   const [showForum, setShowForum] = useState(false);
@@ -21,14 +23,9 @@ const Forum = () => {
     }
   };
   const submitHandler = (e) => {
-    e.preventDefault(); // Prevents default refresh by the browser
+    e.preventDefault();
     emailjs
-      .sendForm(
-        "service_qavlhho",
-        "template_n8g7sy5",
-        e.target,
-        "user_n5002173eUYll5nRzHxmv"
-      )
+      .sendForm(emailAPI.service, emailAPI.template, e.target, emailAPI.user)
       .then(
         (result) => {
           console.log(result.text);
